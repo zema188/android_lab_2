@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/event_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event ID:"
+        tools:text="Event ID: 12345" />
+
+    <TextView
+        android:id="@+id/event_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event Name:"
+        tools:text="Event Name: Sample Event" />
+    <TextView
+        android:id="@+id/event_is_online"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event Is Online:"
+        tools:text="Event Is Online: true" />
+
+    <TextView
+        android:id="@+id/event_quantity_persons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event Quantity Persons:"
+        tools:text="Event Quantity Persons: 5" />
+
+    <Button
+        android:id="@+id/view_contacts_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Contacts" />
+
+</LinearLayout>

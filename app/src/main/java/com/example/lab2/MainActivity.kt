@@ -2,7 +2,9 @@ package com.example.lab2
 
 import EventItem
 import EventsAdapter
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -17,8 +19,11 @@ class MainActivity : AppCompatActivity() {
         list.adapter = adapter
     }
     private fun onEventItemClicked(item: EventItem) {
-        Toast.makeText(
-            this, "Event: ${item.name} clicked!", Toast.LENGTH_SHORT
-        ).show()
+        val detailsIntent = Intent(this, DetailsActivity::class.java)
+        detailsIntent.putExtra("event_id", item.id)
+        detailsIntent.putExtra("event_name", item.name)
+        detailsIntent.putExtra("event_is_online", item.isOnline)
+        detailsIntent.putExtra("event_quantity_persons", item.quantityPersons)
+        startActivity(detailsIntent)
     }
 }
