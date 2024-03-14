@@ -1,6 +1,7 @@
 package com.example.lab2
 
 import EventItem
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.provider.ContactsContract
@@ -42,11 +43,15 @@ class DetailsActivity : AppCompatActivity() {
 
     }
 
+    companion object {
 
-    private fun onEventItemClickedTest(item: EventItem) {
-        val intent = Intent(this, DetailsActivity::class.java)
-        intent.putExtra("event_id", item.id)
-        startActivity(intent)
+        private const val EXTRA_EVENT_ID = ""
+        
+        fun eventIntent(context: Context, item: EventItem): Intent  = Intent(
+            context, DetailsActivity::class.java
+        ).apply {
+            putExtra("event_id", item.id)
+        }
+
     }
-
 }
